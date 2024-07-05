@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">OkeBenoitHub</string>
+    <string name="app_label_name">OkBenoitHb</string>
+    <string name="app_author">Ndong Oke Benoit Presly</string>
+    <string name="app_author_email">okebenoithub@gmail.com</string>
+    <string name="app_author_github">https://github.com/OkeBenoitHub?tab=repositories</string>
+    <string name="package_name_text" translatable="false">com.okebenoithub.android.www</string>
+
+    <!-- Date time -->
+    <string name="yesterday_text">Yesterday</string>
+    <string name="days_ago_text">days ago</string>
+    <string name="hours_ago_text">hours ago</string>
+    <string name="hour_ago_text">An hour ago</string>
+    <string name="minutes_ago_text">minutes ago</string>
+    <string name="minute_ago_text">A minute ago</string>
+    <string name="just_now_ago_text">Just now</string>
+
+    <!-- General -->
+    <string name="no_internet_connection_text">No internet connection available.</string>
+    <string name="no_description">No description</string>
+    <string name="no_data_found">No data found</string>
+    <string name="failed_upload_file_text">Failed to upload file</string>
+    <string name="email_not_found_for_user_error">This email does not exist in our system</string>
+    <string name="incorrect_password_error">Incorrect password</string>
+    <string name="account_disabled_text">Your account has been disabled</string>
+    <string name="cancel_button_text">Cancel</string>
+    <string name="app_icon_image">App icon</string>
+    <string name="code_samples_guides_and_api_reference">Code samples, guides, and API reference</string>
+    <string name="welcome_to_androidhub">Benoit Presly Ndong Oke</string>
+    <string name="code_samples_and_api_references">Code samples and API references</string>
+
+    <!-- Menu -->
+    <string name="share_app_menu_item_text">Share App</string>
+    <string name="rate_app_menu_item_text">Rate App</string>
+    <string name="send_feedback_menu_item_text">Send Feedback</string>
+    <string name="share_app">Share App</string>
+    <string name="feedback_text">Feedback</string>
+    <string name="report_issue_text">Report an issue</string>
+    <string name="share_app_via_text">Share App via:</string>
+    <string name="about_app_share_1">Presly Benoit is an Android Developer from Gabon with over 8 years of experience living in United States.\nTap the link below to find some sample projects that shows his skills in Android development:</string>
+    <string name="about_app_share2">Tap the link below to learn more:</string>
+    <string name="app_store_link" translatable="false">link to app store</string>
+    <string name="send_feedback_via_text">Send feedback via</string>
+    <string name="tell_us_how_to_improve_app">Send feedback via Gmail</string>
+    <string name="email_app_for_reports_and_feedback" translatable="false">oke.benoithub@gmail.com</string>
+    <string name="tell_us_about_issue_text">Send report via Gmail</string>
+    <string name="report_issue_via_text">Report the issue via</string>
+    <string name="hire_me">Hire me</string>
+    <string name="hire_me_text">Hire me as an Android Developer</string>
+    <string name="hire_me_message">Have a job for me? Send me an email.</string>
+    <string name="hire_me_via_text">Send me an email</string>
+    <string name="about_app_message">Hi, My name is Presly and i\'m an Android Developer with over 8 years of experience.\nHere you can find some sample projects that shows my skills in Android development.\nHave a job for me? Contact me.</string>
+    <string name="go_to_my_github">Go to my GitHub</string>
+    <string name="cv_text">CV</string>
+    <string name="github_link">https://github.com/OkeBenoitHub?tab=repositories</string>
+    <string name="download_my_cv">Download my CV</string>
+    <string name="search_sample_projects">Search sample projects</string>
+    <string name="go_to_sample_projects">Sample Projects</string>
+    <string name="my_cv">My CV</string>
+    <string name="github">GitHub</string>
+    <string name="contact_email_text">Email: okebenoithub@gmail.com</string>
+    <string name="contact_phones_text">Phone:\n(+1) 347 630 6815\n(+241) 66 07 71 22</string>
+    <string name="lives_born_in_text">Born in Gabon and lives in United States.</string>
+    <string name="projects_label_text">Projects</string>
+    <string name="search">Search</string>
+    <string name="download_cv_btn_text">Download Cv</string>
+
+    <!-- Live Data and ViewModel -->
+    <string name="simple_game_using_live_data_and_viewmodel">Simple Game using Live Data and ViewModel</string>
+    <string name="team_b_text">Team B</string>
+    <string name="score_label">Score</string>
+    <string name="_2_points">2 points</string>
+    <string name="_1_point">1 point</string>
+    <string name="_3_points">3 points</string>
+    <string name="team_a">Team A</string>
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
+    <string name="reset">Reset</string>
+    <string name="_0_text">0</string>
+    <string name="lose">Lose:</string>
+    <string name="win">Win:</string>
+    <string name="stop">Stop</string>
+    <string name="flow_data_test">Flow data test</string>
+    <string name="waiting_for_flow_of_data">Waiting for flow of data</string>
+    <string name="collect">Collect</string>
+    <string name="waiting_for_coroutines_data">Waiting for coroutines data</string>
+</resources>

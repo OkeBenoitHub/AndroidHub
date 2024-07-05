@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <!-- Home Fragment -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.okebenoithub.android.www.ui.fragments.home.HomeFragment"
+        android:label="@string/app_label_name"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_projectsFragment"
+            app:destination="@id/projectsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/retro_fragment_open_enter"
+            app:popExitAnim="@anim/retro_fragment_close_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_myCvFragment"
+            app:destination="@id/myCvFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/retro_fragment_open_enter"
+            app:popExitAnim="@anim/retro_fragment_open_exit" />
+    </fragment>
+
+    <!-- Projects Fragment -->
+    <fragment
+        android:id="@+id/projectsFragment"
+        android:name="com.okebenoithub.android.www.ui.fragments.project.ProjectsFragment"
+        android:label="@string/projects_label_text"
+        tools:layout="@layout/fragment_projects" >
+        <action
+            android:id="@+id/action_projectsFragment_to_liveDataVmFragment"
+            app:destination="@id/liveDataVmFragment" />
+        <action
+            android:id="@+id/action_projectsFragment_to_kotlinFlowsFragment"
+            app:destination="@id/kotlinFlowsFragment" />
+        <action
+            android:id="@+id/action_projectsFragment_to_coroutinesFragment"
+            app:destination="@id/coroutinesFragment" />
+        <action
+            android:id="@+id/action_projectsFragment_to_dataStoreFragment"
+            app:destination="@id/dataStoreFragment" />
+    </fragment>
+
+    <!-- My Cv Fragment -->
+    <fragment
+        android:id="@+id/myCvFragment"
+        tools:layout="@layout/fragment_my_cv"
+        android:name="com.okebenoithub.android.www.ui.fragments.cv.MyCvFragment"
+        android:label="@string/my_cv" />
+
+    <!-- Live Data ViewModel Fragment -->
+    <fragment
+        android:id="@+id/liveDataVmFragment"
+        tools:layout="@layout/fragment_live_data_vm"
+        android:name="com.okebenoithub.android.www.ui.fragments.liveDataViewModel.LiveDataVmFragment"
+        android:label="LiveData and ViewModel" >
+        <argument
+            android:name="project"
+            app:argType="com.okebenoithub.android.www.data.models.ProjectModel" />
+    </fragment>
+
+    <!-- Kotlin Flows Fragment -->
+    <fragment
+        android:id="@+id/kotlinFlowsFragment"
+        tools:layout="@layout/fragment_kotlin_flows"
+        android:name="com.okebenoithub.android.www.ui.fragments.kotlinFlows.KotlinFlowsFragment"
+        android:label="Kotlin flows" >
+        <argument
+            android:name="project"
+            app:argType="com.okebenoithub.android.www.data.models.ProjectModel" />
+    </fragment>
+    <!-- Coroutines Fragment -->
+    <fragment
+        android:id="@+id/coroutinesFragment"
+        android:name="com.okebenoithub.android.www.ui.fragments.coroutines.CoroutinesFragment"
+        android:label="Coroutines"
+        tools:layout="@layout/fragment_coroutines" >
+        <argument
+            android:name="project"
+            app:argType="com.okebenoithub.android.www.data.models.ProjectModel" />
+    </fragment>
+    <!-- Data Store Fragment -->
+    <fragment
+        android:id="@+id/dataStoreFragment"
+        android:name="com.okebenoithub.android.www.ui.fragments.datastore.DataStoreFragment"
+        android:label="Jetpack DataStore"
+        tools:layout="@layout/fragment_data_store" >
+        <argument
+            android:name="project"
+            app:argType="com.okebenoithub.android.www.data.models.ProjectModel" />
+    </fragment>
+</navigation>

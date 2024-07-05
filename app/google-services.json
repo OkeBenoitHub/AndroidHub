@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "851700522146",
+    "project_id": "okebenoithub-a6607",
+    "storage_bucket": "okebenoithub-a6607.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851700522146:android:041b406fd9035126538bfb",
+        "android_client_info": {
+          "package_name": "com.okebenoithub.android.www"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCSTdXOAXlkUyk--DSlhicuHGnxw2yojk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

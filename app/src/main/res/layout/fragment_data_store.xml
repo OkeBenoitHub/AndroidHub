@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.okebenoithub.android.www.ui.fragments.datastore.DataStoreViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.datastore.DataStoreFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/main_bg_app_color"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/layout_left_margin"
+            android:paddingTop="16dp"
+            android:paddingEnd="@dimen/layout_right_margin"
+            android:paddingBottom="16dp">
+
+            <androidx.core.widget.NestedScrollView
+                style="@style/NestedScrollBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Header -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/header_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:fontFamily="@font/lato_heavy"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="Store and get data"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/about_content_color" />
+                    </androidx.cardview.widget.CardView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/userId"
+                        style="@style/EditTextTheme"
+                        android:inputType="number"
+                        android:background="@color/white"
+                        android:layout_marginTop="8dp"
+                        android:text="@={viewModel.userId}"
+                        android:hint="UserId"
+                        app:layout_constraintTop_toBottomOf="@id/header_title"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/userName"
+                        style="@style/EditTextTheme"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/white"
+                        android:text="@={viewModel.userName}"
+                        android:hint="UserName"
+                        app:layout_constraintTop_toBottomOf="@id/userId"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/userEmail"
+                        style="@style/EditTextTheme"
+                        android:layout_marginTop="8dp"
+                        android:padding="8dp"
+                        android:fontFamily="@font/lato_medium"
+                        android:text="@={viewModel.userEmail}"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:background="@color/white"
+                        android:inputType="textEmailAddress"
+                        android:hint="Email"
+                        app:layout_constraintTop_toBottomOf="@id/userName"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/userAge"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/white"
+                        android:text="@={viewModel.userAge}"
+                        android:theme="@style/EditTextTheme"
+                        android:inputType="number"
+                        android:hint="Age"
+                        app:layout_constraintTop_toBottomOf="@id/userEmail"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:id="@+id/userGender"
+                        app:layout_constraintTop_toBottomOf="@id/userAge"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <RadioButton android:id="@+id/radio_gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="@{() -> viewModel.onGenderSelected('M')}"
+                            android:text="Male"/>
+                        <RadioButton android:id="@+id/radio_female"
+                            android:layout_width="wrap_content"
+                            android:onClick="@{() -> viewModel.onGenderSelected('F')}"
+                            android:layout_height="wrap_content"
+                            android:text="Female"/>
+                    </RadioGroup>
+
+                    <Button
+                        app:layout_constraintTop_toBottomOf="@id/userGender"
+                        android:layout_width="match_parent"
+                        android:text="Save Data"
+                        android:onClick="@{() -> viewModel.saveData()}"
+                        android:id="@+id/saveDataStoreBtn"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        app:layout_constraintTop_toBottomOf="@id/saveDataStoreBtn"
+                        android:layout_width="match_parent"
+                        android:text="Get Data"
+                        android:onClick="@{() -> viewModel.getData()}"
+                        android:id="@+id/getDataStoreBtn"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        app:layout_constraintTop_toBottomOf="@id/getDataStoreBtn"
+                        android:id="@+id/dataStoreTv"
+                        android:layout_marginTop="8dp"
+                        android:text="@{viewModel.dataStoreTv}"
+                        android:layout_height="wrap_content" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

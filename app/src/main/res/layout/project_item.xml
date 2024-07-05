@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mrl_rippleColor="@color/colorPrimaryDark"
+        app:mrl_rippleHover="true"
+        app:mrl_rippleOverlay="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/mainBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_centerInParent="true"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_bg_color">
+
+                    <ImageView
+                        android:id="@+id/item_thumbnail"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:background="@android:color/darker_gray"
+                        android:contentDescription="@string/no_description"
+                        android:scaleType="fitXY" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/item_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/lato_bold"
+                        android:maxLines="2"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textStyle="bold"
+                        tools:text="Title" />
+
+                    <TextView
+                        android:id="@+id/item_publish_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="@color/music_publish_date_color" />
+
+                </LinearLayout>
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:id="@+id/openProjectInfoWeb"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:visibility="visible"
+                    app:mrl_rippleColor="@color/colorPrimaryDark"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+
+                    <ImageView
+                        android:id="@+id/openProjectInfoWebBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:contentDescription="@string/no_description"
+                        android:padding="8dp"
+                        android:src="@drawable/baseline_info_outline_white_24"
+                        android:textColor="@color/colorPrimaryLight"
+                        android:textStyle="bold" />
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/mainBox"
+                android:background="#ccc" />
+        </RelativeLayout>
+    </com.balysv.materialripple.MaterialRippleLayout>
+</layout>
