@@ -18,7 +18,7 @@ class DataStoreViewModel(val app: Application) : AndroidViewModel(app) {
     val userName = MutableLiveData<String>()
     val userEmail = MutableLiveData<String>()
     val userAge = MutableLiveData<String>()
-    val userGender = MutableLiveData<String>()
+    private val userGender = MutableLiveData<String>()
     val dataStoreTv = MutableLiveData<String>()
 
     private val _uiState = MutableLiveData<Event<String>>()
@@ -81,16 +81,34 @@ class DataStoreViewModel(val app: Application) : AndroidViewModel(app) {
         // Save data to DataStore
         viewModelScope.launch {
             dataStorePrefUtil.saveString("user_id", userIdValue)
-            // get data from DataStore
-            dataStorePrefUtil.getString("user_id").collect { value ->
-                _uiState.value = Event("Data saved successfully")
-            }
+            dataStorePrefUtil.saveString("user_name", userNameValue)
+            dataStorePrefUtil.saveString("user_email", userEmailValue)
+            dataStorePrefUtil.saveString("user_age", userAgeValue)
+            dataStorePrefUtil.saveString("user_gender", userGenderValue)
+            dataStoreTv.value = "Data saved successfully"
         }
-
     }
 
     fun getData() {
         // TODO: Get data from DataStore
+        // get data from DataStore
+        viewModelScope.launch {
+            dataStorePrefUtil.getString("user_id").collect { value ->
+                _uiState.value = Event(value.toString())
+            }
+            dataStorePrefUtil.getString("user_name").collect { value ->
+                _uiState.value = Event(value.toString())
+            }
+            dataStorePrefUtil.getString("user_email").collect { value ->
+                _uiState.value = Event(value.toString())
+            }
+            dataStorePrefUtil.getString("user_age").collect { value ->
+                _uiState.value = Event(value.toString())
+            }
+            dataStorePrefUtil.getString("user_gender").collect { value ->
+                _uiState.value = Event(value.toString())
+            }
+        }
     }
 }
 

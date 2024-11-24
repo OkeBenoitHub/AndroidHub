@@ -126,6 +126,60 @@ class ProjectsListAdapter(val context: Context) :
                 "https://developer.android.com/topic/libraries/architecture/datastore",
                 "Wed Jul 4 2024",
                 ""
+            ),
+            ProjectModel(
+                "5",
+                "2",
+                "Play Audio and Video",
+                "Jetpack Media3 defines a Player interface that outlines basic functionality for playback of video and audio files. ExoPlayer is the default implementation of this interface in Media3.",
+                "https://developer.android.com/media/implement/playback-app",
+                "Sun Jul 21 2024",
+                ""
+            ),
+            ProjectModel(
+                "6",
+                "2",
+                "CameraX and Gallery",
+                "CameraX is a Jetpack library, built to help make camera app development easier. For new apps, we recommend starting with CameraX. It provides a consistent, easy-to-use API that works across the vast majority of Android devices, with backward-compatibility to Android 5.0 (API level 21).",
+                "https://developer.android.com/media/camera/camerax",
+                "Sun Jul 21 2024",
+                ""
+            ),
+            ProjectModel(
+                "7",
+                "2",
+                "Download Files",
+                "Kdownloader can be used to download any type of files like image, video, pdf, apk and etc.",
+                "https://github.com/varungulatii/Kdownloader",
+                "Mon Jul 22 2024",
+                ""
+            ),
+            ProjectModel(
+                "8",
+                "2",
+                "Notifications",
+                "A notification is a message that Android displays outside your app's UI to provide the user with reminders, communication from other people, or other timely information from your app.",
+                "https://developer.android.com/develop/ui/views/notifications",
+                "Mon Jul 22 2024",
+                ""
+            ),
+            ProjectModel(
+                "9",
+                "2",
+                "Work and Alarm Manager",
+                "WorkManager is the recommended library for persistent work. Scheduled work is guaranteed to execute sometime after its Constraints are met.",
+                "https://developer.android.com/reference/androidx/work/WorkManager",
+                "Sun Jul 28 2024",
+                ""
+            ),
+            ProjectModel(
+                "10",
+                "2",
+                "Room Database",
+                "The Room persistence library provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite",
+                "https://developer.android.com/jetpack/androidx/releases/room",
+                "Sun Jul 28 2024",
+                ""
             )
         )
     }

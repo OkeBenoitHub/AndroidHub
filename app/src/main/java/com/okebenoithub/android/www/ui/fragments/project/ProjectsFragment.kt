@@ -74,6 +74,12 @@ class ProjectsFragment : Fragment() {
                 "2" -> navigateToFlowsFragment(item)
                 "3" -> navigateToCoroutinesFragment(item)
                 "4" -> navigateToDataStoreFragment(item)
+                "5" -> navigateToMediaFileFragment()
+                "6" -> navigateToCameraXFragment()
+                "7" -> navigateToDownloadFilesFragment()
+                "8" -> navigateToNotificationsFragment()
+                "9" -> navigateToWorkManagerFragment()
+                "10" -> navigateToRoomDbFragment()
             }
         }
 
@@ -114,5 +120,53 @@ class ProjectsFragment : Fragment() {
         (activity as MainActivity).findNavController(
             R.id.fragmentContainerView
         ).navigate(ProjectsFragmentDirections.actionProjectsFragmentToDataStoreFragment(item))
+    }
+
+    // navigate to MediaFile fragment
+    private fun navigateToMediaFileFragment() {
+        // navigate to MediaFile fragment
+        (activity as MainActivity).findNavController(
+            R.id.fragmentContainerView
+        ).navigate(ProjectsFragmentDirections.actionProjectsFragmentToMediaFileFragment())
+    }
+
+    // navigate to CameraX fragment
+    private fun navigateToCameraXFragment() {
+        // navigate to CameraX fragment
+        (activity as MainActivity).findNavController(
+            R.id.fragmentContainerView
+        ).navigate(ProjectsFragmentDirections.actionProjectsFragmentToCameraXFragment())
+    }
+
+    // navigate to DownloadFiles fragment
+    private fun navigateToDownloadFilesFragment() {
+        // navigate to DownloadFiles fragment
+        (activity as MainActivity).findNavController(
+            R.id.fragmentContainerView
+        ).navigate(ProjectsFragmentDirections.actionProjectsFragmentToDownloadFilesFragment())
+    }
+
+    // navigate to Notifications fragment
+    private fun navigateToNotificationsFragment() {
+        // navigate to Notifications fragment
+        (activity as MainActivity).findNavController(
+            R.id.fragmentContainerView
+        ).navigate(ProjectsFragmentDirections.actionProjectsFragmentToNotificationsFragment())
+    }
+
+    // navigate to WorkManager fragment
+    private fun navigateToWorkManagerFragment() {
+        // navigate to WorkManager fragment
+        (activity as MainActivity).findNavController(
+            R.id.fragmentContainerView
+        ).navigate(ProjectsFragmentDirections.actionProjectsFragmentToWorkManagerFragment())
+    }
+
+    // navigate to RoomDb fragment
+    private fun navigateToRoomDbFragment() {
+        // navigate to RoomDb fragment
+        (activity as MainActivity).findNavController(
+            R.id.fragmentContainerView
+        ).navigate(ProjectsFragmentDirections.actionProjectsFragmentToRoomDbFragment())
     }
 }

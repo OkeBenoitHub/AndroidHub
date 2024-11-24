@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.okebenoithub.android.www.ui.media.viewModel.MediaFileViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.media.MediaFileFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/main_bg_app_color"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                style="@style/NestedScrollBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="@dimen/layout_left_margin"
+                    android:paddingTop="16dp"
+                    android:paddingEnd="@dimen/layout_right_margin"
+                    android:paddingBottom="16dp">
+
+                    <LinearLayout
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:id="@+id/play_buttons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/play_audio"
+                            android:layout_marginEnd="4dp"
+                            android:text="Play Audio"
+                            android:layout_height="wrap_content" />
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:id="@+id/play_video"
+                            android:layout_weight="1"
+                            android:text="Play Video"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/button_download"
+                        app:layout_constraintTop_toBottomOf="@id/play_buttons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Download File"
+                        android:layout_centerInParent="true" />
+
+                    <androidx.media3.ui.PlayerView
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@id/button_download"
+                        android:id="@+id/media_player_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="320dp"
+                        app:show_buffering="always"
+                        app:resize_mode="fill" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

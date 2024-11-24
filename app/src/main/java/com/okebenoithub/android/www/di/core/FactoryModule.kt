@@ -1,8 +1,10 @@
 package com.okebenoithub.android.www.di.core
 
 import android.app.Application
+import com.okebenoithub.android.www.ui.fragments.download.viewModel.DownloadFilesVMFactory
 import com.okebenoithub.android.www.ui.fragments.home.viewModel.HomeViewModelFactory
 import com.okebenoithub.android.www.ui.fragments.project.viewModel.ProjectsViewModelFactory
+import com.okebenoithub.android.www.ui.media.viewModel.MediaFileViewModelFactory
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -33,6 +35,26 @@ class FactoryModule {
         app: Application,
     ): ProjectsViewModelFactory {
         return ProjectsViewModelFactory(
+            app
+        )
+    }
+
+    @Singleton
+    @Provides
+    fun provideMediaFileViewModelFactory(
+        app: Application,
+    ): MediaFileViewModelFactory {
+        return MediaFileViewModelFactory(
+            app
+        )
+    }
+
+    @Singleton
+    @Provides
+    fun provideDownloadFilesViewModelFactory(
+        app: Application,
+    ): DownloadFilesVMFactory {
+        return DownloadFilesVMFactory(
             app
         )
     }

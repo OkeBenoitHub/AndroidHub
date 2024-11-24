@@ -20,11 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/main_bg_app_color"
-            android:orientation="vertical"
-            android:paddingStart="@dimen/layout_left_margin"
-            android:paddingTop="16dp"
-            android:paddingEnd="@dimen/layout_right_margin"
-            android:paddingBottom="16dp">
+            android:orientation="vertical">
 
             <androidx.core.widget.NestedScrollView
                 style="@style/NestedScrollBarStyle"
@@ -35,7 +31,11 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:paddingStart="@dimen/layout_left_margin"
+                    android:paddingTop="16dp"
+                    android:paddingEnd="@dimen/layout_right_margin"
+                    android:paddingBottom="16dp">
 
                     <!-- Header -->
                     <androidx.cardview.widget.CardView
@@ -233,7 +233,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/layout_left_margin"
+                android:paddingTop="16dp"
+                android:paddingEnd="@dimen/layout_right_margin"
+                android:paddingBottom="16dp">
 
                 <com.balysv.materialripple.MaterialRippleLayout
                     android:id="@+id/goToProjectsFragmentLayout"

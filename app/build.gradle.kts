@@ -15,6 +15,7 @@ plugins {
 android {
     namespace = "com.okebenoithub.android.www"
     compileSdk = 34
+    buildToolsVersion = "34.0.0"
     // resolve conflicts between the support library and the AndroidX libraries
     // useLibrary("org.apache.http.legacy")
 
@@ -26,10 +27,10 @@ android {
 
     defaultConfig {
         applicationId = "com.okebenoithub.android.www"
-        minSdk = 23
+        minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 4
+        versionName = "4.0.0"
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled = true
         buildConfigField("String","YOUTUBE_API_KEY","\"YOUTUBE_API_KEY\"")
@@ -40,7 +41,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -92,6 +93,7 @@ dependencies {
 
     // glide
     implementation(libs.glide)
+    implementation(libs.interactivemedia)
     ksp(libs.compiler)
 
     // room database
@@ -149,6 +151,24 @@ dependencies {
 
     // object store for storing complex data structures
     implementation("com.orhanobut:hawk:2.0.1")
+
+    // exoplayer media 3
+    implementation("androidx.media3:media3-exoplayer:1.3.1")
+    implementation("androidx.media3:media3-exoplayer-dash:1.3.1")
+    implementation("androidx.media3:media3-ui:1.3.1")
+
+    // cameraX
+    implementation("androidx.camera:camera-core:1.3.4")
+    implementation("androidx.camera:camera-camera2:1.3.4")
+    implementation("androidx.camera:camera-lifecycle:1.3.4")
+    implementation("androidx.camera:camera-video:1.3.4")
+    implementation ("androidx.camera:camera-view:1.3.4")
+    implementation("androidx.camera:camera-extensions:1.3.4")
+
+    // okhttp
+    implementation("com.squareup.okhttp3:okhttp:4.9.3")
+
+    implementation("com.github.varungulatii:Kdownloader:1.0.4")
 
     //////////////////////////////// Firebase //////////////////////////////
     implementation(platform(libs.firebase.bom)) // firebase bom

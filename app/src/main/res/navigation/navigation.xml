@@ -45,6 +45,24 @@
         <action
             android:id="@+id/action_projectsFragment_to_dataStoreFragment"
             app:destination="@id/dataStoreFragment" />
+        <action
+            android:id="@+id/action_projectsFragment_to_mediaFileFragment"
+            app:destination="@id/mediaFileFragment" />
+        <action
+            android:id="@+id/action_projectsFragment_to_cameraXFragment"
+            app:destination="@id/cameraXFragment" />
+        <action
+            android:id="@+id/action_projectsFragment_to_downloadFilesFragment"
+            app:destination="@id/downloadFilesFragment" />
+        <action
+            android:id="@+id/action_projectsFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_projectsFragment_to_workManagerFragment"
+            app:destination="@id/workManagerFragment" />
+        <action
+            android:id="@+id/action_projectsFragment_to_roomDbFragment"
+            app:destination="@id/roomDbFragment" />
     </fragment>
 
     <!-- My Cv Fragment -->
@@ -75,6 +93,7 @@
             android:name="project"
             app:argType="com.okebenoithub.android.www.data.models.ProjectModel" />
     </fragment>
+
     <!-- Coroutines Fragment -->
     <fragment
         android:id="@+id/coroutinesFragment"
@@ -85,6 +104,7 @@
             android:name="project"
             app:argType="com.okebenoithub.android.www.data.models.ProjectModel" />
     </fragment>
+
     <!-- Data Store Fragment -->
     <fragment
         android:id="@+id/dataStoreFragment"
@@ -95,4 +115,46 @@
             android:name="project"
             app:argType="com.okebenoithub.android.www.data.models.ProjectModel" />
     </fragment>
+
+    <!-- Media File Fragment -->
+    <fragment
+        android:id="@+id/mediaFileFragment"
+        tools:layout="@layout/fragment_media_file"
+        android:name="com.okebenoithub.android.www.ui.media.MediaFileFragment"
+        android:label="Play Audio and Video" />
+
+    <!-- CameraX Fragment -->
+    <fragment
+        android:id="@+id/cameraXFragment"
+        android:name="com.okebenoithub.android.www.ui.fragments.cameraX.CameraXFragment"
+        android:label="CameraX and Gallery"
+        tools:layout="@layout/fragment_camera_x" />
+
+    <!-- Download Files Fragment -->
+    <fragment
+        android:id="@+id/downloadFilesFragment"
+        tools:layout="@layout/fragment_download_files"
+        android:name="com.okebenoithub.android.www.ui.fragments.download.DownloadFilesFragment"
+        android:label="Download Files" />
+
+    <!-- Notifications Fragment -->
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.okebenoithub.android.www.ui.fragments.notifications.NotificationsFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <!-- Work Manager Fragment -->
+    <fragment
+        android:id="@+id/workManagerFragment"
+        tools:layout="@layout/fragment_work_manager"
+        android:name="com.okebenoithub.android.www.ui.fragments.workmanager.WorkManagerFragment"
+        android:label="Work and Alarm Manager" />
+
+    <!-- Room Db Fragment -->
+    <fragment
+        android:id="@+id/roomDbFragment"
+        tools:layout="@layout/fragment_room_db"
+        android:name="com.okebenoithub.android.www.ui.fragments.roomdb.RoomDbFragment"
+        android:label="Room Database" />
 </navigation>

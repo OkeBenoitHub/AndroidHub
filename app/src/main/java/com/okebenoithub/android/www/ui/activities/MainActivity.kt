@@ -11,8 +11,10 @@ import com.okebenoithub.android.www.components.NETWORK_STATUS_PREF_KEY
 import com.okebenoithub.android.www.components.NETWORK_WIFI
 import com.okebenoithub.android.www.components.NO_NETWORK
 import com.okebenoithub.android.www.databinding.ActivityMainBinding
+import com.okebenoithub.android.www.ui.fragments.download.viewModel.DownloadFilesVMFactory
 import com.okebenoithub.android.www.ui.fragments.home.viewModel.HomeViewModelFactory
 import com.okebenoithub.android.www.ui.fragments.project.viewModel.ProjectsViewModelFactory
+import com.okebenoithub.android.www.ui.media.viewModel.MediaFileViewModelFactory
 import com.okebenoithub.android.www.utils.ConnectionType
 import com.okebenoithub.android.www.utils.DialogUtil
 import com.okebenoithub.android.www.utils.MainUtil
@@ -45,6 +47,8 @@ class MainActivity : AppCompatActivity() {
      */
     @Inject lateinit var homeViewModelFactory: HomeViewModelFactory
     @Inject lateinit var projectsViewModelFactory: ProjectsViewModelFactory
+    @Inject lateinit var mediaFileViewModelFactory: MediaFileViewModelFactory
+    @Inject lateinit var downloadFilesVMFactory: DownloadFilesVMFactory
 
     // Navigation controller
     private lateinit var mNavController: NavController
